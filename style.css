@@ -1,0 +1,105 @@
+/* ====== Page Background with Image ====== */
+body {
+    background-image: url('https://i.pinimg.com/736x/41/50/9f/41509f0d31e8cacddfb0a5449dad60ab.jpg'); /* Replace with your image path */
+    background-size: cover;      /* Cover entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: keeps image fixed while scrolling */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+/* Optional: Add a slight overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent white overlay */
+    z-index: -1; /* Keep it behind content */
+}
+
+
+/* ====== Header / Name ====== */
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(22, 94, 66, 0.644);
+    margin-bottom: 50px;
+}
+
+/* ====== Flex container for blocks ====== */
+main {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: nowrap; /* Keep all blocks in one line */
+}
+
+/* ====== Common Block Styling ====== */
+.block {
+    display: block;
+    text-decoration: none;
+    border: 3px solid #333;
+    padding: 20px;
+    width: 32%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover effect */
+}
+
+/* Hover effect for clickability */
+.block:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== Block 1 (HSL Text Color) ====== */
+.block1 {
+    background-color: hsl(150, 73%, 28%); /* warm yellow */
+    color: hsl(160, 100%, 99%); /* dark green text */
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* ====== Block 2 (RGB Text Color) ====== */
+.block2 {
+    background-color: rgba(90, 132, 167, 0.637); /* soft cyan */
+    color: rgb(243, 255, 255); /* strong blue text */
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* ====== Block 3 (HEX Text Color) ====== */
+.block3 {
+    background-color: #0a5761; /* soft pink */
+    color: #eafaef; /* dark green text */
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    text-align: justify;
+}
+
+p::before {
+    content: "★ "; /* Add a symbol before paragraph */
+    color: gold;   /* Highlight color */
+    font-weight: bold;
+}
+
+p::after {
+    content: " ✨"; /* Add a symbol after paragraph */
+    color: orange;
+}
+
+
+
